@@ -30,8 +30,8 @@ function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; 
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
           el.classList.add("reveal-in");
           io.disconnect();
         }
@@ -86,7 +86,7 @@ function Index() {
             </div>
           </Reveal>
           <Reveal delay={200} className="float-slow">
-            <a href={CC_LINKS[0].href} target="_blank" rel="noreferrer" className="glass-panel block overflow-hidden rounded-xl [transform:perspective(1400px)_rotateY(-12deg)_rotateX(4deg)]">
+            <a href={"https://campuscoders-theta.vercel.app"} target="_blank" rel="noreferrer" className="glass-panel block overflow-hidden rounded-xl [transform:perspective(1400px)_rotateY(-12deg)_rotateX(4deg)]">
               <div className="flex items-center gap-2 border-b border-glass-edge px-4 py-3">
                 <span className="h-2 w-2 rounded-full bg-foreground/20" />
                 <span className="h-2 w-2 rounded-full bg-foreground/20" />
@@ -95,7 +95,7 @@ function Index() {
               </div>
               <div className="relative aspect-[16/10] bg-background/40">
                 <iframe
-                  src={CC_LINKS[0].href}
+                  src={"https://campuscoders-theta.vercel.app"}
                   title="Campus Coders live interface"
                   loading="lazy"
                   className="pointer-events-none absolute left-0 top-0 h-[200%] w-[200%] origin-top-left scale-50 border-0"
