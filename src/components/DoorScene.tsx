@@ -91,10 +91,10 @@ export function DoorScene() {
             alt="A figure walking toward the doorway"
             width={640}
             height={1280}
-            className="pointer-events-none absolute left-1/2 will-change-transform"
+            className="pointer-events-none absolute left-1/2 w-auto max-w-none will-change-transform"
             style={{
               height: "38vh",
-              bottom: "calc(4vh + var(--walk) * 38vh)",
+              bottom: "calc(2vh + var(--walk) * 44vh)",
               transform:
                 "translateX(-50%) scale(calc(1 - var(--walk) * 0.82))",
               transformOrigin: "50% 100%",
