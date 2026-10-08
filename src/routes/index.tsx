@@ -63,7 +63,7 @@ const TECH = [
 
 function Index() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-clip">
       <DoorScene />
 
       {/* SCENE 03 — Campus Coders */}
