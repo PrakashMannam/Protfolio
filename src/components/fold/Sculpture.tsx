@@ -85,7 +85,7 @@ function Fold({ progress, reduced, count }: Props & { count: number }) {
       group.current.position.y = wide ? 0 : THREE.MathUtils.lerp(0.5, 0.9, unfold);
     }
 
-    heroPos.set(wide ? 0.05 : 0, wide ? 0 : -0.1, 1.1);
+    heroPos.set(wide ? -0.4 : 0, wide ? 0 : -0.1, 1.1);
     poses.forEach((pose, i) => {
       const m = panels.current[i];
       if (!m) return;
