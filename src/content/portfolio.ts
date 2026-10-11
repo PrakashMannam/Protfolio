@@ -20,6 +20,7 @@ export const about =
 export const campusCoders = {
   title: "Campus Coders",
   tagline: "Student-led DSA & Community Platform",
+  summary: "Daily problems as curated links, learning paths, discussions, and announcements — in one place for students and admins.",
   live: "https://campuscoders-theta.vercel.app",
   links: [
     { label: "Live", href: "https://campuscoders-theta.vercel.app" },
