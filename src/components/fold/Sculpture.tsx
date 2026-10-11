@@ -55,7 +55,7 @@ function Fold({ progress, reduced, count }: Props & { count: number }) {
       const loopPos = new THREE.Vector3(Math.cos(a) * R, Math.sin(a * 2) * 0.18, Math.sin(a) * R);
       const loopRot = new THREE.Euler(0, -a + Math.PI / 2, a / 2, "YXZ");
       const k = i - (count - 1) / 2;
-      const layerPos = new THREE.Vector3(k * 0.12, k * -0.03, k * -0.3 - 0.8);
+      const layerPos = new THREE.Vector3(-0.9 + i * 0.09, 0.05 - i * 0.02, -0.6 - i * 0.28); void k;
       const layerRot = new THREE.Euler(-0.08, 0.55, 0.04, "YXZ");
       return {
         loopPos, loopQ: new THREE.Quaternion().setFromEuler(loopRot),
