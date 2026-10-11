@@ -10,4 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Site copy/data lives only in src/content/portfolio.ts; scenes render it. Why: one place to edit facts.
-- Scroll-driven scenes animate CSS variables via a GSAP ScrollTrigger timeline; layers derive styles from those vars. Why: reversible, GPU-cheap, easy to explain.
+- Scroll-driven scenes map ScrollTrigger progress to a ref (3D, read in useFrame) and a CSS var (DOM overlays); visuals are pure functions of progress. Why: reversible, cheap, easy to explain.
+- The 3D sculpture is lazy-loaded behind ClientOnly. Why: three.js must never run during SSR.

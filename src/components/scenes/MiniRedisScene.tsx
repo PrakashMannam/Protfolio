@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import redisWorld from "@/assets/redis-world.jpg";
 import { miniRedis } from "@/content/portfolio";
 import { createMiniRedisSim } from "@/lib/miniredis-sim";
 import { Reveal } from "@/components/ui/Reveal";
@@ -51,8 +50,7 @@ export function MiniRedisScene() {
     <section className="relative bg-night text-night-foreground">
       <div className="h-40 bg-gradient-to-b from-background to-night" />
       <div className="relative">
-        <img src={redisWorld} alt="" loading="lazy" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-night/20 to-night" />
+        <div className="redis-ground absolute inset-0" />
         <div className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-16 px-6 py-32 lg:grid-cols-[1fr_1.1fr_auto] md:px-14">
           <Reveal>
             <p className="eyebrow text-moon">02 — Project</p>

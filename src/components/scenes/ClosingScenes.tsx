@@ -1,4 +1,3 @@
-import heroWorld from "@/assets/hero-world.jpg";
 import { about, contacts, education, identity, technologies } from "@/content/portfolio";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -43,10 +42,9 @@ export function AboutScene() {
 export function ContactScene() {
   return (
     <section id="contact" className="relative min-h-screen overflow-hidden">
-      <img src={heroWorld} alt="" loading="lazy" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover opacity-70" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background" />
+      <div className="fold-ground absolute inset-0" />
       <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
-        <div className="door-light mb-12 h-40 w-20 border border-glass-edge opacity-80" />
+        <div className="mb-14 h-28 w-28 rotate-45 border border-foreground/30 [box-shadow:inset_0_0_0_14px_var(--background),inset_0_0_0_15px_color-mix(in_oklab,var(--foreground)_25%,transparent)]" />
         <Reveal><h2 className="font-display text-6xl md:text-8xl">Let's build something.</h2></Reveal>
         <Reveal delay={200}>
           <nav className="mt-14 flex flex-wrap justify-center gap-8">
