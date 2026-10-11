@@ -81,6 +81,7 @@ function Fold({ progress, reduced, count }: Props & { count: number }) {
       const idle = reduced ? 0 : state.clock.elapsedTime * 0.12;
       group.current.rotation.y = (idle + p * Math.PI * 1.1) * (1 - unfold) + unfold * 0;
       group.current.rotation.x = 0.35 * (1 - unfold) + 0.05;
+      group.current.scale.setScalar(wide ? 1 : 0.68);
       group.current.position.x = wide ? THREE.MathUtils.lerp(0.9, 1.35, unfold) : 0;
       group.current.position.y = wide ? 0 : THREE.MathUtils.lerp(0.5, 0.9, unfold);
     }

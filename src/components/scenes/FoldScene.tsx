@@ -69,7 +69,7 @@ export function FoldScene() {
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-muted-foreground">{identity.statement}</p>
           </div>
         </div>
-        <div className="eyebrow pointer-events-none absolute bottom-8 right-6 flex items-center gap-3 text-muted-foreground md:right-14" style={{ opacity: "clamp(0, 1 - var(--p) * 6, 1)" }}>
+        <div className="eyebrow pointer-events-none absolute bottom-8 right-6 hidden md:flex items-center gap-3 text-muted-foreground md:right-14" style={{ opacity: "clamp(0, 1 - var(--p) * 6, 1)" }}>
           Scroll to unfold <span className="block h-10 w-px bg-foreground/40" />
         </div>
 
