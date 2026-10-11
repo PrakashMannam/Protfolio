@@ -55,7 +55,7 @@ function Fold({ progress, reduced, count }: Props & { count: number }) {
       const loopPos = new THREE.Vector3(Math.cos(a) * R, Math.sin(a * 2) * 0.18, Math.sin(a) * R);
       const loopRot = new THREE.Euler(0, -a + Math.PI / 2, a / 2, "YXZ");
       const k = i - (count - 1) / 2;
-      const layerPos = new THREE.Vector3(k * 0.16, k * -0.05, k * -0.42);
+      const layerPos = new THREE.Vector3(k * 0.12, k * -0.03, k * -0.3 - 0.8);
       const layerRot = new THREE.Euler(-0.08, 0.55, 0.04, "YXZ");
       return {
         loopPos, loopQ: new THREE.Quaternion().setFromEuler(loopRot),
@@ -81,11 +81,11 @@ function Fold({ progress, reduced, count }: Props & { count: number }) {
       const idle = reduced ? 0 : state.clock.elapsedTime * 0.12;
       group.current.rotation.y = (idle + p * Math.PI * 1.1) * (1 - unfold) + unfold * 0;
       group.current.rotation.x = 0.35 * (1 - unfold) + 0.05;
-      group.current.position.x = wide ? THREE.MathUtils.lerp(0.9, 0.7, unfold) : 0;
+      group.current.position.x = wide ? THREE.MathUtils.lerp(0.9, 1.35, unfold) : 0;
       group.current.position.y = wide ? 0 : THREE.MathUtils.lerp(0.5, 0.9, unfold);
     }
 
-    heroPos.set(wide ? 0.6 : 0, wide ? 0 : -0.1, 1.4);
+    heroPos.set(wide ? 0.05 : 0, wide ? 0 : -0.1, 1.1);
     poses.forEach((pose, i) => {
       const m = panels.current[i];
       if (!m) return;
@@ -95,7 +95,7 @@ function Fold({ progress, reduced, count }: Props & { count: number }) {
       if (i === hero) {
         tmpV.lerp(heroPos, reveal);
         tmpQ.slerp(heroQ, reveal);
-        m.scale.setScalar(1 + reveal * (wide ? 1.15 : 0.7));
+        m.scale.setScalar(1 + reveal * (wide ? 0.6 : 0.4));
       } else {
         const fade = 1 - reveal * 0.55;
         (m.material as THREE.MeshPhysicalMaterial).opacity = (dark ? 0.16 : 0.22) * fade;
