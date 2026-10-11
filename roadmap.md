@@ -5,3 +5,8 @@
 - [x] MiniRedis interactive terminal (PING/SET/GET, clearly labeled simulated) + path animation
 - [x] Light/dark theme, persisted, respects system
 - [x] Real contact links; split content/data/scenes; ARCHITECTURE.md
+- [x] Impossible Fold: sculpture + Campus Coders reveal (scenes 01–02)
+- [ ] Fold: internal structure — sculpture separates into Campus Coders architecture layers
+- [ ] Fold: MiniRedis — geometry becomes a connected network
+- [ ] Fold: reconstruction — object reassembles for stack, about, contact
+- [ ] Resume link (needs file from user)
