@@ -39,12 +39,15 @@ export const campusCoders = {
   ],
 };
 
+// Verified against github.com/PrakashMannam/mini-redis-java (MiniRedisServer.java).
 export const miniRedis = {
   title: "MiniRedis",
   tagline: "In-memory database / networking experiment built in Java",
   category: "Systems prototype",
-  summary: "A Redis-like key-value store written in Java. Clients connect over TCP; each command is parsed, run against an in-memory store, and answered on the same socket.",
-  tech: ["Java", "TCP sockets", "Networking"],
+  summary: "A Redis-like key-value server on port 6379. Each TCP client gets its own thread; commands arrive as plain text or RESP (so redis-cli works), are routed against a ConcurrentHashMap, and keys can expire with SET … EX.",
+  tech: ["Java", "TCP sockets", "RESP protocol", "Thread pool", "ConcurrentHashMap"],
+  commands: "PING · SET [EX] · GET · DEL · EXISTS · KEYS",
+  links: [{ label: "GitHub", href: "https://github.com/PrakashMannam/mini-redis-java" }],
   path: ["Client", "TCP", "Server Socket", "Command Parser", "In-Memory Store", "Response"],
 };
 
