@@ -9,4 +9,6 @@
 - [ ] Fold: internal structure — sculpture separates into Campus Coders architecture layers
 - [ ] Fold: MiniRedis — geometry becomes a connected network
 - [ ] Fold: reconstruction — object reassembles for stack, about, contact
+- [x] Selected Work section (Campus Coders featured + MiniRedis terminal)
+- [ ] MiniRedis repository link (needs URL from user)
 - [ ] Resume link (needs file from user)

@@ -74,7 +74,7 @@ export function FoldScene() {
         </div>
 
         {/* Scene 02 — Campus Coders, revealed in sequence */}
-        <div id="work" className="absolute inset-0 flex flex-col justify-end px-6 pb-10 md:justify-center md:px-14 md:pb-0">
+        <div className="absolute inset-0 flex flex-col justify-end px-6 pb-10 md:justify-center md:px-14 md:pb-0">
           <div className="max-w-sm">
             <p className="eyebrow text-muted-foreground" style={{ opacity: "clamp(0, (var(--p) - 0.5) * 6, 1)" }}>01 — Project</p>
             <h2 className="mt-4 font-display text-5xl leading-[0.95] md:text-7xl" style={{ opacity: "clamp(0, (var(--p) - 0.56) * 6, 1)", transform: "translateY(calc(clamp(0, 0.72 - var(--p), 1) * 80px))" }}>

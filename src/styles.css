@@ -158,3 +158,10 @@
   .float-slow, .reveal-in { animation: none; opacity: 1; }
   html { scroll-behavior: auto; }
 }
+
+@utility shard {
+  background: linear-gradient(150deg, oklch(0.93 0.05 230 / 0.45), oklch(0.94 0.05 300 / 0.3) 50%, oklch(0.95 0.06 80 / 0.35));
+  border: 1px solid var(--glass-edge);
+  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-glass);
+}

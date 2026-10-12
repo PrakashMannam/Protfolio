@@ -42,7 +42,21 @@ export const campusCoders = {
 export const miniRedis = {
   title: "MiniRedis",
   tagline: "In-memory database / networking experiment built in Java",
+  category: "Systems prototype",
+  summary: "A Redis-like key-value store written in Java. Clients connect over TCP; each command is parsed, run against an in-memory store, and answered on the same socket.",
+  tech: ["Java", "TCP sockets", "Networking"],
   path: ["Client", "TCP", "Server Socket", "Command Parser", "In-Memory Store", "Response"],
+};
+
+export const selectedWork = {
+  label: "01 — Selected Work",
+  title: "Selected Work",
+  intro: "Two projects built end to end — one deployed product, one systems experiment.",
+};
+
+export const campusCodersMeta = {
+  category: "Deployed full-stack app",
+  tech: ["Java", "Spring Boot", "Spring Security", "React", "MySQL"],
 };
 
 export const technologies = [
